@@ -1,0 +1,89 @@
+name: Deploy site
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - "assets/**"
+      - "_sass/**"
+      - "_scripts/**"
+      - "**.bib"
+      - "**.html"
+      - "**.js"
+      - "**.liquid"
+      - "**/*.md"
+      - "**.yml"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "!.github/workflows/axe.yml"
+      - "!.github/workflows/broken-links.yml"
+      - "!.github/workflows/deploy-image.yml"
+      - "!.github/workflows/prettier.yml"
+      - "!CUSTOMIZE.md"
+      - "!FAQ.md"
+      - "!INSTALL.md"
+      - "!README.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: false # Manual install below to fix lockfile mismatch
+
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: "pip"
+
+      - name: Cache Jekyll 💾
+        uses: actions/cache@v4
+        with:
+          path: .jekyll-cache
+          key: ${{ runner.os }}-jekyll-${{ hashFiles('Gemfile.lock') }}-${{ github.run_id }}
+          restore-keys: |
+            ${{ runner.os }}-jekyll-${{ hashFiles('Gemfile.lock') }}-
+            ${{ runner.os }}-jekyll-
+
+      - name: Update _config.yml ⚙️
+        uses: fjogeleit/yaml-update-action@main
+        with:
+          commitChange: false
+          valueFile: "_config.yml"
+          propertyPath: "giscus.repo"
+          value: ${{ github.repository }}
+
+      - name: Install and Build 🔧
+        run: |
+          # Fix the "frozen" error by allowing the lockfile to update
+          bundle config set --local frozen false
+          bundle install
+          
+          # Install notebook tools
+          pip3 install nbconvert
+          
+          # Build the site
+          export JEKYLL_ENV=production
+          bundle exec jekyll build
+
+      - name: Purge unused CSS 🧹
+        run: npx purgecss -c purgecss.config.js
+
+      - name: Deploy 🚀
+        if: github.event_name != 'pull_request'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: _site
