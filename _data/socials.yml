@@ -11,10 +11,10 @@
 bluesky_url: bluesky_url # your bluesky URL
 # dblp_url: # your DBLP profile url
 # discord_id: # your discord id (18-digit unique numerical identifier)
-email: name.surname@university.edu # your email address
+email: iskander.azangulov@spc.ox.ac.uk # your email address
 # facebook_id: # your facebook id
 # flickr_id: # your flickr id
-github_username: github_username # your GitHub user name
+github_username: imbirik # your GitHub user name
 # gitlab_username: # your GitLab user name
 # hal_id: # your HAL id (https://hal.science/)
 # ieee_id: # your ieeexplore.ieee.org/author/id
@@ -25,7 +25,7 @@ github_username: github_username # your GitHub user name
 # lastfm_id: # your lastfm id
 # lattes_id: # your ID on Lattes (Brazilian Lattes CV)
 # leetcode_id: # your LeetCode id
-linkedin_username: linkedin_username # your LinkedIn user name
+linkedin_username: iskander-azangulov-44986a298 # your LinkedIn user name
 # mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 # medium_username: # your Medium username
 # orcid_id: # your ORCID ID
@@ -35,7 +35,7 @@ linkedin_username: linkedin_username # your LinkedIn user name
 # quora_username: # your Quora username
 # research_gate_profile: # your profile on ResearchGate
 # rss_icon: true # comment this line to hide the RSS icon
-scholar_userid: 0000AAAAAaaaaa # your Google Scholar ID
+scholar_userid: Hg46lccAAAAJ # your Google Scholar ID
 # scopus_id: # your profile on Scopus
 # semanticscholar_id: # your Semantic Scholar ID
 # spotify_id: # your spotify id
@@ -48,7 +48,7 @@ scholar_userid: 0000AAAAAaaaaa # your Google Scholar ID
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
 # work_url: # work page URL
-# x_username:  # your X handle
+x_username: IAzangulov # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username
 # custom_social: # can be any name here other than the ones already defined above
