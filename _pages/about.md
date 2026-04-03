@@ -8,8 +8,8 @@ profile:
   align: right
   image: prof_pic.png
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p><a href="mailto:name.surname@university.edu">name.surname@university.edu</a></p>
+  # more_info: >
+  #   <p><a href="mailto:name.surname@university.edu">name.surname@university.edu</a></p>
 ---
 
 I am a third-year DPhil (PhD) student in the Department of Statistics at Oxford University supervised by [Patrick Rebeschini](https://www.stats.ox.ac.uk/~rebeschi/), [Judith Rousseau](https://dauphine.psl.eu/recherche/cvtheque/profil/rousseau-judith) and [Yorgos Deligiannidis](https://ziorzis.github.io/).
