@@ -12,20 +12,8 @@ profile:
     <p><a href="mailto:name.surname@university.edu">name.surname@university.edu</a></p>
 ---
 
-I am an academic at the [University](https//www.universitywebsite.com). I'm currently in the process of building by website. 
+I am a third-year DPhil (PhD) student in the Department of Statistics at Oxford University supervised by [Patrick Rebeschini](https://www.stats.ox.ac.uk/~rebeschi/), [Judith Rousseau](https://dauphine.psl.eu/recherche/cvtheque/profil/rousseau-judith) and [Yorgos Deligiannidis](https://ziorzis.github.io/).
 
-**My research interests lie in**
+My research revolves around diffusion models and their mathematical foundations. During my DPhil, I have interned at [Microsoft Research Cambridge](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/).
 
-- **Interest 1.**
-- **Interest 2.**
-- **Interest 3.**
-
-If you’d like to chat, feel free to reach out via <a href="mailto:name.surname@university.edu">name.surname@university.edu</a>
-
-## Talks
-
-I'll give talks at the following venues:
-
-- Venue 1 : *Title 1*
-- Venue 2 : *Title 2*
-- Venue 3 : *Title 3*
+If you’d like to chat, feel free to reach out via <a href="mailto:iskander.azangulov@spc.ox.ac.uk">iskander.azangulov@spc.ox.ac.uk</a>
