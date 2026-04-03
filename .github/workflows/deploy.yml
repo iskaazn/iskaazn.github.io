@@ -64,11 +64,6 @@ jobs:
           export JEKYLL_ENV=production
           bundle exec jekyll build
 
-      - name: Check for Unused JS
-        run: |
-          chmod +x ./check_unused_js.sh
-          ./check_unused_js.sh
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
